@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QA Management Dashboard</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <!--comienzo del sidebar-->
+    <nav class="sidebar">
+      <header>
+        <div class="logo-container">
+          <i class="bx bxl-codepen icon"></i>
+          <span class="logo-text">Dashboard</span>
+        </div>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="#" id="link-inicio">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text nav-text">Inicio</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" id="link-sp">
+                <i class="bx bx-chip icon"></i>
+                <span class="text nav-text">Stored Procedures</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" id="link-queries">
+                <i class="bx bx-data icon"></i>
+                <span class="text nav-text">Queries SQL</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" id="link-casos">
+                <i class="bx bx-test-tube icon"></i>
+                <span class="text nav-text">Casos de prueba</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="#" id="link-manual">
+                <i class="bx bx-book-open icon"></i>
+                <span class="text nav-text">Manual de usuario</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--fin del sidebar-->
+
+    <!--comienzo del contenido principal-->
+    <main class="main-content">
+      <section id="inicio" class="content-section active">
+    <div class="welcome-container">
+        <div class="welcome-text">
+            <h1>QA Engineer Portfolio</h1>
+            <p>Explora mi trabajo en el aseguramiento de calidad, validación de datos y documentación técnica. Este dashboard interactivo muestra mi capacidad para gestionar procesos críticos de software.</p>
+            <div class="status-badge">
+                <span class="dot"></span> Entorno de Pruebas Activo
+            </div>
+        </div>
+    </div>
+
+    <div class="main-dashboard-grid">
+        
+        <div class="radar-container">
+            <h3>Áreas de Expertise</h3>
+            <div class="radar-chart">
+                <div class="radar-circle circle-1"></div>
+                <div class="radar-circle circle-2"></div>
+                <div class="radar-circle circle-3"></div>
+                <div class="radar-point p-sql" data-label="SQL Server"></div>
+                <div class="radar-point p-e2e" data-label="Pruebas E2E"></div>
+                <div class="radar-point p-doc" data-label="Manuales"></div>
+                <div class="radar-point p-reg" data-label="Regresión"></div>
+            </div>
+            <p class="radar-footer">Enfoque principal en Integridad de Datos</p>
+        </div>
+
+        <div class="navigation-modules">
+            <h3>Explorar Módulos</h3>
+            <div class="nav-cards-grid">
+                
+                <div class="nav-card" onclick="document.getElementById('link-sp').click();">
+                    <div class="n-card-icon"><i class='bx bx-chip'></i></div>
+                    <div class="n-card-body">
+                        <h4>Stored Procedures</h4>
+                        <p>Ver lógica y corrección de scripts SQL.</p>
+                    </div>
+                    <i class='bx bx-chevron-right arrow'></i>
+                </div>
+
+                <div class="nav-card" onclick="document.getElementById('link-queries').click();">
+                    <div class="n-card-icon"><i class='bx bx-terminal'></i></div>
+                    <div class="n-card-body">
+                        <h4>Consola SQL</h4>
+                        <p>Pruebas de consultas y resultados en tiempo real.</p>
+                    </div>
+                    <i class='bx bx-chevron-right arrow'></i>
+                </div>
+
+                <div class="nav-card" onclick="document.getElementById('link-casos').click();">
+                    <div class="n-card-icon"><i class='bx bx-check-shield'></i></div>
+                    <div class="n-card-body">
+                        <h4>Casos de Prueba</h4>
+                        <p>Evidencias QA y certificación de escenarios.</p>
+                    </div>
+                    <i class='bx bx-chevron-right arrow'></i>
+                </div>
+
+                <div class="nav-card" onclick="document.getElementById('link-manual').click();">
+                    <div class="n-card-icon"><i class='bx bx-book-content'></i></div>
+                    <div class="n-card-body">
+                        <h4>Documentación</h4>
+                        <p>Guías de usuario y procesos técnicos.</p>
+                    </div>
+                    <i class='bx bx-chevron-right arrow'></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+      <section id="sp" class="content-section">
+        <div class="section-header">
+          <h1>Catálogo de Stored Procedures</h1>
+          <p>
+            Lista detallada de procedimientos almacenados, sus parámetros de
+            entrada y la lógica que ejecutan para el mantenimiento del sistema.
+          </p>
+        </div>
+
+        <div class="grid-container">
+          <article class="sp-card">
+            <div class="card-icon">
+              <i class="bx bx-code-block"></i>
+            </div>
+            <div class="card-body">
+              <h3>SP_OC_ELIMINA_LINEAORDEN</h3>
+              <h4>Detalle que soluciona:</h4>
+              <p>
+                Cuando en una orden de compra tenemos algun producto con venta
+                especial y uno o varios productos sin venta especial, al
+                eliminar el producto con venta especial el resto tomaba el
+                descuento de venta especial.
+              </p>
+              <div class="tags">
+                <span class="tag">SQL Server</span>
+                <span class="tag">Transact SQL</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button
+                class="btn-read-more"
+                onclick="abrirDetalle('sp_elimina')"
+              >
+                Ver Explicación
+              </button>
+            </div>
+          </article>
+
+          <article class="sp-card">
+            <div class="card-icon">
+              <i class="bx bx-code-block"></i>
+            </div>
+            <div class="card-body">
+              <h3>SP_REPORTE_IPRMONTOSPERIODO</h3>
+              <h4>Detalle que soluciona:</h4>
+              <p>
+                Cuando dentro del sistema se desea obtener un reporte de los
+                montos reales por periodo, este procedimiento facilita la
+                obtención de dicha información de manera eficiente.
+              </p>
+              <div class="tags">
+                <span class="tag">SQL Server</span>
+                <span class="tag">Transact SQL</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button
+                class="btn-read-more"
+                onclick="abrirDetalle('sp_reporte')"
+              >
+                Ver Explicación
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="queries" class="content-section">
+        <div class="section-header">
+          <h1>SQL Queries</h1>
+          <p>
+            Colección de consultas listas para usar, ideales para generar
+            reportes rápidos, revisar información en las tablas y realizar
+            auditorías de datos.
+          </p>
+        </div>
+
+        <div class="query-container">
+          <div class="query-selector">
+            <button class="q-btn active" onclick="cargarQuery(0)">
+              1. Consulta Familias
+            </button>
+            <button class="q-btn" onclick="cargarQuery(1)">
+              2. Estatus Orden
+            </button>
+            <button class="q-btn" onclick="cargarQuery(2)">
+              3. Inserts Estructura
+            </button>
+            <button class="q-btn" onclick="cargarQuery(3)">
+              4. Rangos e Importes
+            </button>
+          </div>
+
+          <div class="sql-terminal">
+            <div class="terminal-header">
+              <span><i class="bx bx-terminal"></i> SQL Editor</span>
+              <button class="copy-btn" onclick="copiarSQL()">
+                <i class="bx bx-copy"></i> Copiar
+              </button>
+            </div>
+            <textarea id="sqlEditor" readonly spellcheck="false"></textarea>
+            <button class="run-btn" onclick="ejecutarSimulacion()">
+              <i class="bx bx-play"></i> Ejecutar Query
+            </button>
+          </div>
+
+          <div class="result-console">
+            <div class="console-header">Resultado de la ejecución:</div>
+            <div id="resultTable" class="table-responsive">
+              <p class="placeholder-text">
+                Selecciona un query y presiona "Ejecutar" para ver los datos...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="casos" class="content-section">
+        <div class="section-header">
+          <h1>Casos de Prueba QA</h1>
+          <p>
+            Registro de validaciones integrales, pruebas de regresión y
+            escenarios de estrés para Stored Procedures y Reportes.
+          </p>
+        </div>
+
+        <div class="qa-container">
+          <table class="qa-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Escenario de Prueba</th>
+                <th>Módulo Relacionado</th>
+                <th>Tipo</th>
+                <th>Resultado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CP-01</td>
+                <td>
+                  <strong>Pruebas E2E:</strong> Validación de flujos de
+                  comisiones, jerarquías de red y reglas de negocio multinivel.
+                </td>
+                <td>Módulo Multinivel</td>
+                <td><span class="badge-type">Funcional</span></td>
+                <td>
+                  <span class="status-pass"
+                    ><i class="bx bx-check-circle"></i> Exitoso</span
+                  >
+                </td>
+                <td>
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1lq6pX8UlI4TYLxLXskBO5zt9yUGGaEgXCNfBsz9iBaQ/edit?usp=sharing"
+                    target="_blank"
+                    class="btn-view-doc"
+                  >
+                    <i class="bx bx-link-external"></i> Ver Evidencia
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>CP-02</td>
+                <td>
+                  <strong>Pruebas de Regresión Integral:</strong> Certificación
+                  de estabilidad global tras actualizaciones críticas en el Core
+                  del sistema.
+                </td>
+                <td>Multi-módulo</td>
+                <td><span class="badge-type">Regresión/E2E</span></td>
+                <td>
+                  <span class="status-pass"
+                    ><i class="bx bx-check-circle"></i> Exitoso</span
+                  >
+                </td>
+                <td>
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1NmBbHcsdjlH9qON_25hYx-fob8ExGL2wMYyJgdc3QNQ/edit?usp=sharing"
+                    target="_blank"
+                    class="btn-view-doc"
+                  >
+                    <i class="bx bx-link-external"></i> Ver Evidencia
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>CP-03</td>
+                <td>
+                  <strong>Conciliación de Datos:</strong> Validación de
+                  integridad financiera mediante comparativa de Snapshots
+                  (Cierre de Líderes).
+                </td>
+                <td>Reporte Cierre Líderes</td>
+                <td><span class="badge-type">Integridad</span></td>
+                <td>
+                  <span class="status-pass"
+                    ><i class="bx bx-check-circle"></i> Conciliado</span
+                  >
+                </td>
+                <td>
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1unOCNv2YnvOohYWb1JQMtcdbbnwDZsDBqk5f5H0xiSg/edit?usp=sharing"
+                    target="_blank"
+                    class="btn-view-doc"
+                  >
+                    <i class="bx bx-link-external"></i> Ver Evidencia
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>CP-04</td>
+                <td>
+                  <strong>Análisis de Brechas:</strong> Auditoría de
+                  consistencia y sincronización del catálogo maestro de
+                  sucursales.
+                </td>
+                <td>Catálogo de Sucursales</td>
+                <td><span class="badge-type">Auditoría/MDM</span></td>
+                <td>
+                  <span class="status-pass"
+                    ><i class="bx bx-check-circle"></i> Auditado</span
+                  >
+                </td>
+                <td>
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1hxQeoTKwcpzrdcSPSUsydgwr1-3E4IotAC1YFifqWWs/edit?usp=sharing"
+                    target="_blank"
+                    class="btn-view-doc"
+                  >
+                    <i class="bx bx-link-external"></i> Ver Relación
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="manual" class="content-section">
+        <div class="section-header">
+          <h1>Centro de Documentación</h1>
+          <p>
+            Guías detalladas para el usuario final y procesos operativos del
+            sistema.
+          </p>
+        </div>
+
+        <div class="manual-container">
+          <div class="manual-card">
+            <div class="manual-icon">
+              <i class="bx bxs-file-pdf"></i>
+            </div>
+            <div class="manual-info">
+              <span class="manual-badge">Documentación Oficial</span>
+              <h2>Manual de Usuario: Gestión de Órdenes y Reportes</h2>
+              <p>
+                Este documento cubre el flujo completo de operación: desde la
+                creación de una orden de compra, validación de descuentos
+                especiales, hasta la generación de reportes de conciliación para
+                líderes.
+              </p>
+              <div class="manual-features">
+                <span><i class="bx bx-check"></i> Guía paso a paso</span>
+                <span><i class="bx bx-check"></i> Resolución de errores</span>
+                <span><i class="bx bx-check"></i> Glosario técnico</span>
+              </div>
+              <div class="manual-actions">
+                <a
+                  href="https://drive.google.com/file/d/1yTp-zYH3-OHzQip_V7S1lUWdjJ573qnh/view?usp=sharing"
+                  target="_blank"
+                  class="btn-primary"
+                >
+                  <i class="bx bx-show"></i> Leer en Línea
+                </a>
+                <a
+                  href="img/Manual Modulo Distribuidores Wopzi.pdf"
+                  download
+                  class="btn-secondary"
+                >
+                  <i class="bx bx-download"></i> Descargar PDF
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+   <div id="modalExplicacion" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="modalTitle">Explicación Técnica</h2>
+      <span class="close-btn">&times;</span>
+    </div>
+    <div class="modal-body">
+      <div id="modalDescription" class="modal-text"></div>
+
+      <div class="image-container">
+        <img id="modalImage" src="" alt="Captura de Código SQL" />
+      </div>
+
+      <div class="download-section">
+        <a id="downloadBtn" href="" target="_blank" class="btn-download">
+          <i class="bx bx-link-external"></i> Ver Script en Google Drive
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/terminal.js"></script>
+  </body>
+</html>
