@@ -29,6 +29,5 @@ Sigue estos pasos para ver el proyecto localmente:
 1. **Clonar el repositorio:**
    Desde GitHub (Botón "Code" -> "Download ZIP") o usando la terminal:
    ```bash
-   git clone [https://github.com/aleIng28
-/QA-Dashboard.git](https://github.com/aleIng28
-/QA-Dashboard.git)
+   git clone [https://github.com/aleIng28/QA-Dashboard.git]
+   (https://github.com/aleIng28/QA-Dashboard.git)
